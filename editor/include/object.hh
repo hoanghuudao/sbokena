@@ -5,11 +5,10 @@
  * the player. To open a door, a box needs to be on top of its respective
  * button. */
 
-enum class ObjectType { Box = 0, Player = 1 };
+enum class ObjectType { Box, Player };
 
 class Object {
 public:
-  Object() : type(ObjectType::Box) {}
   explicit Object(ObjectType type) : type(type) {}
   virtual ~Object() = default;
   ObjectType GetType() const {
